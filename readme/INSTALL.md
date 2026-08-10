@@ -1,7 +1,7 @@
 # Installation
 
 
-The code was tested on windows 10, with [Anaconda](https://www.anaconda.com/download) Python 3.10.16 and [PyTorch]((http://pytorch.org/)) v2.4.1. NVIDIA GPUs are needed for both training and testing.
+The code was tested on windows 10, with [Anaconda](https://www.anaconda.com/download) Python 3.10.16 and [PyTorch]((http://pytorch.org/)) v2.4.1, NVIDIA GPUs are needed for both training and testing.
 After install Anaconda:
 
 0. [Optional but recommended] create a new conda environment. 

@@ -6,11 +6,11 @@ The implementation for method proposed in Multimodal LLM for Function-aware Buil
 
 ##  Data preparation
 
-- refer to the DTAT.md
+- refer to the readme/DTAT.md
 
 ##  Install the implementation environment
 
-- refer to the INSTALL.md
+- refer to the readme/INSTALL.md
 
 ##  Training on your device and datasets
 

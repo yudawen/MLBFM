@@ -53,7 +53,7 @@ The implementation for method proposed in Multimodal LLM for Function-aware Buil
   modify: exp_id, lr_step & num_epochs (and lr, batch_size, ...)
 
 ### #8 training 
-   open MLBFM_ROOT & run python src/main.py
+   open MLBFM_ROOT in CMD & run python src/main.py
 
 ##  Testing on your device and datasets
 
@@ -63,4 +63,4 @@ open MLBFM_ROOT/src/preditc_rs2_buff.py
 modify: "model_path", "save_path" & "image_path"
   
 ### #2
- open MLBFM_ROOT/src & run: python preditc_rs2_buff.py
+ open MLBFM_ROOT/src in CMD & run: python preditc_rs2_buff.py

@@ -476,7 +476,7 @@ class ResNet50(nn.Module):
 
 
 
-        return [z],seg_x,xs, mask, all_feats,[seg_embeddings,seg_embeddings_ori],loss_llm*0.01#,centermap
+        return [z],seg_x,xs, mask, all_feats,[seg_embeddings,seg_embeddings_ori],loss_llm*0.1
 
 def get_pose_net(num_layers, heads, head_conv):
 

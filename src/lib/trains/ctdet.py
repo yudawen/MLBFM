@@ -235,7 +235,7 @@ class CtdetLoss(torch.nn.Module):
           py_loss_all += self.criterion(pt.view(-1,10), batch['ct_cls'].view(-1).long().cuda())
 
         else:
-          continue
+          # continue
 
           py_loss_all += self.criterion(pt.view(-1, 10), batch['ct_cls'].view(-1).long().cuda()) *0.1
 

@@ -31,7 +31,7 @@ Modify the following parameters according to your dataset:
 * `train_path`
 * `val_path`
 
-### Step 2: Configure the DANCE Module
+### Step 2: Configure the polygon Module
 
 Open:
 
@@ -47,7 +47,7 @@ class_num = 10
 
 > Set `class_num` to the number of building-function categories in your dataset.
 
-### Step 3: Configure the ResNet Backbone
+### Step 3: Configure the MLLM 
 
 Modify:
 
@@ -63,7 +63,7 @@ class_num = 10
 
 > The value of `class_num` should be consistent with the number of building-function categories in your dataset.
 
-### Step 4: Configure Building-Function Categories
+### Step 4: Configure Building-Function Categories in the Detector
 
 Open:
 
@@ -204,5 +204,4 @@ python preditc_rs2_buff.py
 
 The model will perform inference on the specified images and save the results to `save_path`.
 
-```
-```
+

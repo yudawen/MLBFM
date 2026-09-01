@@ -14,53 +14,53 @@ The implementation for method proposed in Multimodal LLM for Function-aware Buil
 
 ##  Training on your device and datasets
 
-### #1
+### #step 1
   open MLBFM_ROOT/src/lib/datasets/dataset/BuildFunc.py
 
   modify: "num_classes", "train_path" & "val_path"
 
-### #2 
+### #step 2 
   open MLBFM_ROOT/src/lib/models/dance_lib/networks/dance/evolve813.py
   
   modify: "class_num=10"
 
-### #3 
+### #step 3 
   open MLBFM_ROOT/src/lib/models/networks/msra_resnetv4.py
 
   modify: "class_num=10" 
 
-### #4 
+### #step 4 
   open MLBFM_ROOT/src/lib/detectors/ctdet.py
 
   modify: "building_functions = ['dense residential', 'business', 'commercial', 'residential', 'factory', 'government', 'hospital', 'resort', 'public', 'school']"
 
-### #5 
+### #step 5 
   open MLBFM_ROOT/src/lib/trains/base_trainer.py
 
   modify: "building_functions = ['dense residential', 'business', 'commercial', 'residential', 'factory', 'government', 'hospital', 'resort', 'public', 'school']"
 
 
-### #6
+### #step 6
   open MLBFM_ROOT/src/lib/trains/ctdet.py
 
   modify: build_ce_with_fixed_weights
   
 (the category weights should be set according to your datasets)
 
-### #7
+### #step 7
   open MLBFM_ROOT/src/lib/opts.py
 
   modify: exp_id, lr_step & num_epochs (and lr, batch_size, ...)
 
-### #8  
+### #step 8  
    open MLBFM_ROOT in CMD & run python src/main.py for training
 
 ##  Testing on your device and datasets
 
-### #1 
+### #step 1 
 open MLBFM_ROOT/src/preditc_rs2_buff.py
   
 modify: "model_path", "save_path" & "image_path"
   
-### #2
+### #step 2
  open MLBFM_ROOT/src in CMD & run: python preditc_rs2_buff.py for inferencing

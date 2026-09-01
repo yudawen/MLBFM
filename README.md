@@ -4,7 +4,6 @@ The implementation for method proposed in Multimodal LLM for Function-aware Buil
 
 ![model](readme/1a.png)
 
-````markdown
 ## 1. Data Preparation
 
 Please refer to [`README/DATA.md`](README/DATA.md) for detailed instructions on dataset preparation.
@@ -21,7 +20,7 @@ To train MLBFM on your own device and datasets, follow the steps below.
 
 Open:
 
-```text
+
 MLBFM_ROOT/src/lib/datasets/dataset/BuildFunc.py
 ````
 

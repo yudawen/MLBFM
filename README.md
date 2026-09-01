@@ -6,11 +6,11 @@ The implementation for method proposed in Multimodal LLM for Function-aware Buil
 
 ## 1. Data Preparation
 
-Please refer to [`readme/DATA.md`](README/DATA.md) for detailed instructions on dataset preparation.
+Please refer to [readme/DATA.md](README/DATA.md) for detailed instructions on dataset preparation.
 
 ## 2. Environment Setup
 
-Please refer to [`readme/INSTALL.md`](README/INSTALL.md) for instructions on installing and configuring the required environment.
+Please refer to [readme/INSTALL.md](README/INSTALL.md) for instructions on installing and configuring the required environment.
 
 ## 3. Training
 

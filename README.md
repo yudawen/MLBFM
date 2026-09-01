@@ -4,13 +4,14 @@ The implementation for method proposed in Multimodal LLM for Function-aware Buil
 
 ![model](readme/1a.png)
 
+
 ## 1. Data Preparation
 
-Please refer to [readme/DATA.md](README/DATA.md) for detailed instructions on dataset preparation.
+Please refer to [`README/DATA.md`](readme/DATA.md) for detailed instructions on dataset preparation.
 
 ## 2. Environment Setup
 
-Please refer to [readme/INSTALL.md](README/INSTALL.md) for instructions on installing and configuring the required environment.
+Please refer to [`README/INSTALL.md`](readme/INSTALL.md) for instructions on installing and configuring the required environment.
 
 ## 3. Training
 
@@ -20,9 +21,9 @@ To train MLBFM on your own device and datasets, follow the steps below.
 
 Open:
 
-
+```
 MLBFM_ROOT/src/lib/datasets/dataset/BuildFunc.py
-````
+```
 
 Modify the following parameters according to your dataset:
 
@@ -34,13 +35,13 @@ Modify the following parameters according to your dataset:
 
 Open:
 
-```text
+```
 MLBFM_ROOT/src/lib/models/dance_lib/networks/dance/evolve813.py
 ```
 
-Set:
+Modify:
 
-```python
+```
 class_num = 10
 ```
 
@@ -48,15 +49,15 @@ class_num = 10
 
 ### Step 3: Configure the ResNet Backbone
 
-Open:
+Modify:
 
-```text
+```
 MLBFM_ROOT/src/lib/models/networks/msra_resnetv4.py
 ```
 
-Set:
+Modify:
 
-```python
+```
 class_num = 10
 ```
 
@@ -66,7 +67,7 @@ class_num = 10
 
 Open:
 
-```text
+```
 MLBFM_ROOT/src/lib/detectors/ctdet.py
 ```
 
@@ -93,7 +94,7 @@ building_functions = [
 
 Open:
 
-```text
+```
 MLBFM_ROOT/src/lib/trains/base_trainer.py
 ```
 
@@ -120,13 +121,13 @@ building_functions = [
 
 Open:
 
-```text
+```
 MLBFM_ROOT/src/lib/trains/ctdet.py
 ```
 
 Modify:
 
-```python
+```
 build_ce_with_fixed_weights
 ```
 
@@ -138,7 +139,7 @@ Set the category weights according to the class distribution of your dataset.
 
 Open:
 
-```text
+```
 MLBFM_ROOT/src/lib/opts.py
 ```
 
@@ -155,13 +156,13 @@ Modify the training parameters according to your requirements, including:
 
 Open a terminal in the MLBFM root directory:
 
-```bash
+```
 cd MLBFM_ROOT
 ```
 
 Then run:
 
-```bash
+```
 python src/main.py
 ```
 
@@ -177,7 +178,7 @@ To perform inference on your own device and datasets, follow the steps below.
 
 Open:
 
-```text
+```
 MLBFM_ROOT/src/preditc_rs2_buff.py
 ```
 
@@ -191,13 +192,13 @@ Modify the following parameters:
 
 Open a terminal in the `src` directory:
 
-```bash
+```
 cd MLBFM_ROOT/src
 ```
 
 Then run:
 
-```bash
+```
 python preditc_rs2_buff.py
 ```
 

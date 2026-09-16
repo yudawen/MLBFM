@@ -181,7 +181,7 @@ class ResNet50(nn.Module):
         self.processor = AutoProcessor.from_pretrained(model_name)
 
         # ===== 2. 添加 SEG token =====
-        self.processor.tokenizer.add_tokens(["[SEG]"], special_tokens=True)
+        # self.processor.tokenizer.add_tokens(["[SEG]"], special_tokens=True)
         bnb_config = BitsAndBytesConfig(
             load_in_4bit=True,
             bnb_4bit_compute_dtype=torch.float16,
@@ -199,7 +199,7 @@ class ResNet50(nn.Module):
         self.model.gradient_checkpointing_enable()
         self.model.config.use_cache = False
         # resize token embedding
-        self.model.resize_token_embeddings(len(self.processor.tokenizer))
+        # self.model.resize_token_embeddings(len(self.processor.tokenizer))
 
         # ===== 4. 冻结参数 =====
         for p in self.model.parameters():

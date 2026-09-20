@@ -120,8 +120,8 @@ class ModelWithLoss(torch.nn.Module):
     for i in range(B):
         prompt = "<image>"
         prompt += "Can you segment the buildings with different functions in the image?"
-        exist = [f"{name} [SEG{id}]" for id, name in enumerate(building_functions) if id in target[i]]
-        not_exist = [f"{name} [SEG{id}]" for id, name in enumerate(building_functions) if id not in target[i]]
+        exist = [f"{name} <SEG{id}>" for id, name in enumerate(building_functions) if id in target[i]]
+        not_exist = [f"{name} <SEG{id}>" for id, name in enumerate(building_functions) if id not in target[i]]
 
         answer = f"Sure, there are {', '.join(exist)}, there are no {', '.join(not_exist)}."
         # print(prompt)

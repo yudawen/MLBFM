@@ -232,9 +232,9 @@ class CtdetDetector(BaseDetector):
                  answer = 'Sure, they are '
                  for id, name in enumerate(building_functions):
                      if id < len(building_functions) - 1:
-                         answer += f"{name} [SEG{id}],"
+                         answer += f"{name} <SEG{id}>,"
                      else:
-                         answer += f"{name} [SEG{id}]."
+                         answer += f"{name} <SEG{id}>."
                  answers.append(answer)
                  prompts.append(prompt)
 

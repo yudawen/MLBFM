@@ -181,7 +181,7 @@ class ResNet50(nn.Module):
         self.processor = AutoProcessor.from_pretrained(model_name)
 
         # ===== 2. 添加 SEG token =====
-        # self.processor.tokenizer.add_tokens(["[SEG]"], special_tokens=True)
+        # self.processor.tokenizer.add_tokens(["<SEG>"], special_tokens=True)
         bnb_config = BitsAndBytesConfig(
             load_in_4bit=True,
             bnb_4bit_compute_dtype=torch.float16,
@@ -219,7 +219,7 @@ class ResNet50(nn.Module):
 
         # ===== 6. SEG token id =====
 
-        seg_tokens = [f"[SEG{i}]" for i in range(class_num)]
+        seg_tokens = [f"<SEG{i}>" for i in range(class_num)]
         self.processor.tokenizer.add_tokens(seg_tokens)
         self.model.resize_token_embeddings(len(self.processor.tokenizer))
 
